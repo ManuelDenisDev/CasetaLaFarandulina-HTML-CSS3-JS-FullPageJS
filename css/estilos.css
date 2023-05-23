@@ -1,0 +1,331 @@
+/* Importamos Amatic y Lato de Google Fonts 
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Lato', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:wght@100;300;400;700;900&display=swap');
+
+/* Importamos Lovelo Black de la carpeta Fonts */
+@font-face {
+  font-family: "Lovelo Black";
+  src: url("../fonts/LoveloBlack.otf") format("opentype");
+}
+
+
+/* ------------------------- */
+/* Custom Properties */
+/* ------------------------- */
+
+:root {
+  --color-negro: ##40403e;
+  --color-blanco: #ffffff;
+  --color-azul:#05b7ed;
+  --color-rojo: #ee736d;
+  --color-crudo: #fdf1ec;
+  --color-naranja: #f49c5d;
+  --color-celeste: #d4edfc;
+  --color-verde: #c8c752;
+}
+
+/* ------------------------- */
+/* Estilos Generales */
+/* ------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: var(--color-negro);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+/* ------------------------- */
+/* Sección General */
+/* ------------------------- */
+
+.section {
+  background-image: url(../media/bg-imagen-1920.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.section__titulo {
+}
+
+.section__h3 {
+  font-family: "Lovelo Black";
+  font-size: 5em;
+}
+
+.section__h3 span {
+  color: var(--color-naranja);
+}
+
+.section__h4 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 2em;
+  text-transform: uppercase;
+
+  margin-bottom: 1.5em;
+}
+
+/* ------------------------- */
+/* Menu de Navegación */
+/* ------------------------- */
+
+.nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+  width: 100%;
+  margin: 0;
+  padding: 20px 20px;
+}
+
+.nav__h1 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav__h1 {
+  font-size: 2.2em;
+}
+
+.nav__h2 {
+  font-family: "Lovelo Black";
+  font-size: 0.6em;
+}
+
+.nav li,
+.nav a {
+  display: inline-block;
+  margin: 10px;
+  font-family: "Lovelo Black";
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-negro);
+  transition: 0.5s ease;
+}
+
+.nav li.active {
+  border-bottom: 4px solid var(--color-naranja);
+}
+
+.menu li a {
+  transition: 0.5s;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li.active a,
+.menu li:hover a {
+  color: var(--color-naranja);
+}
+
+/* ------------------------- */
+/* Inicio */
+/* ------------------------- */
+
+.inicio__logo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.inicio__logo a img {
+  width: 50%;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+  padding: 0;
+}
+
+.countdown li {
+  color: var(--color-blanco);
+  background-color: var(--color-naranja);
+
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  
+  margin: 0 0.5em;
+}
+
+.countdown span {
+  font-size: 2.5em;
+}
+
+.countdown h3 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.inicio__contenedor__icono {
+  position: absolute;
+  z-index: 2;
+  bottom: 3%;
+  left: 48.8%;
+  font-size: 2.6em;
+  animation: bajar__subir 1s ease infinite;
+}
+
+.inicio__contenedor__icono p a {
+  color: var(--color-naranja);
+}
+
+.inicio__contenedor__icono p a:hover {
+  color: var(--color-negro);
+}
+
+
+/* ------------------------- */
+/* Nuestros Menus */
+/* ------------------------- */
+
+
+.hazte__socio__widget {
+  display: flex;
+  height: 500px;
+}
+
+
+
+/* ------------------------- */
+/* Nuestros Menus */
+/* ------------------------- */
+
+.nuestras__comidas__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nuestras__comidas__img img {
+  height: 500px;
+}
+
+/* ------------------------- */
+/* Redes Sociales */
+/* ------------------------- */
+
+.redes__sociales h3 {
+  transition: 0.3 ease all;
+}
+
+.redes__sociales p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 3em;
+}
+
+.redes__sociales p a {
+  display: flex;
+  width: 2em;
+  height: 2em;
+  background: var(--color-naranja);
+  color: var(--color-blanco);
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2em;
+  margin: 0 1em;
+}
+
+.redes__sociales p a:hover {
+  background: transparent;
+  color: var(--color-naranja);
+  border: 0.1em solid var(--color-naranja);
+}
+
+.footer {
+  position: absolute;
+  bottom: 3%;
+  height: 80px;
+  line-height: 80px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.footer {
+  margin-bottom: 0px;
+  font-size: 0.8em;
+  line-height: 80px;
+  color: var(--color-negro);
+  letter-spacing: 0.5px;
+  font-weight:400;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--color-rosa);
+  font-weight: 800;
+}
+
+
+
+/* ------------------------- */
+/* Clases de fullpage.js */
+/* ------------------------- */
+
+#fp-nav ul li a span {
+  background-color: var(--color-naranja);
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: var(--color-naranja);
+}
+
+/* ------------------------- */
+/* Animaciones */
+/* ------------------------- */
+
+@keyframes bajar__subir {
+  0% {
+    transform: translateY(1em);
+  }
+  25% {
+    transform: translateY(0em);
+  }
+  100% {
+    transform: translateY(1em);
+  }
+}
+
